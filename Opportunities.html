@@ -1,1 +1,154 @@
+<html>
+<head>
+  <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- adjust width to devices -->
+        
+        <script src="Opportunities.js"></script> <!-- retrieve JavaScript file -->
+  <title>CARIT</title>
+  <link rel="stylesheet" type="text/css" href="Index.css" />
+ 
+  <style>
+      img {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 400px;
+      }
+      </style>
+  </head>
+  <body>
+      <header>
+          <div>
+              <a href="http://ccse.kennesaw.edu/it"><img src="KSUlogo.png" alt="ksulogo" class="center"></a>
+              <h2>Department of Information Technology</h2>
+              <h1>Center for Applied Research in Information Technology</h1>
+          </div>
+      </header>
+      <br>
+          <div class="topbar">
+              <a href="index.html">Home</a>
+              <a class="active" href="Faculty.html">Faculty</a>
+              <a href="Resources.html">Resources</a>
+              <a href="Opportunities.html">Opportunities</a>
+      
+          </div>
+          <br>
+    <h2> New Positions</h2>
+    <br>
+    <script type="text/javascript"> //set current menu item active dynamically
+      const currentLocation = location.href;
+      const menuItem = document.querySelectorAll('a');
+      const menuLenght = menuItem.length;
+      for (var i = 0; i<menuLenght; i++){
+          if (menuItem[i].href === currentLocation){
+              menuItem[i].className = "active";
+          }
+      }
+  </script>  
+              </div>
+              <!-- Main -->
+              <div class="item3 textcenter">
+                  <h3>Student Assistant Positions at the <b>CARIT</b></h3>
+              
+                  <p>The CARIT is hiring Student Assistants, There are four openings for the Summer 2022 openings.  In order to be considered for such a position,  student has to complete some necessary <br>courses with an 
+                    average grade requirement of a GPA more than 3.2 for undergraduate students and a GPA greater than 3.7 for graduate students in order to be considered for these possibilities. 
+                    Under graduate students must have taken courses in CSE 3203 Mobile System Overview and IT 4213 Mobile Web Development. Graduate students may choose between IT 7113 Data Visualization or
+                    IT 6713 Business Intelligence.</p>
+                      
+                  <h4>Choose the following options for your eligibility check:</h4>
+                  <form id='evaluate' method='post' action='' target='_blank' style='text-align: left;'>
+                      <fieldset>
+                          <label class="form_label" for="status">What is your student status?</label>
+                          <label class="container">Undergraduate
+                            <input type="radio" name="status" value="under" onchange="student_status()"/><span class="check"></span>
+                          </label>
+                          <label class="container">Graduate
+                            <input type="radio" name="status" value="grad" onchange="student_status()"/><span class="check"></span>
+                          </label>
+                      <div id="form_positions" style="display: none;">    
+                          <label class="form_label" for="position">In which Student Assistant position are you interested at? </label>
+                          <select name="position" onchange="courses()">
+                              <option value="opt0">Select one</option>
+                              <option value="opt1"></option>
+                              <option value="opt2"></option>
+                          </select>
+                          <div id="form_grades">
+                          <fieldset>
+                          <legend class="form_label" style="text-align: left;">Select the letter grade you received for each required course</legend> 
+                          <table>
+                          <tr><td><label class="grade_label" id="Course1" for="grade1">Course 1</label></td>
+                              <td><label class="container">A
+                                  <input type="radio" name="grade1" value="A" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">B
+                                  <input type="radio" name="grade1" value="B" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">C
+                                  <input type="radio" name="grade1" value="C" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">D
+                                  <input type="radio" name="grade1" value="D" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">F
+                                  <input type="radio" name="grade1" value="F" onchange="cleanmessage()"/><span class="check"></span>
+                              </label></td></tr>
+                          <tr><td><label class="grade_label" id="Course2" for="grade2">Course 2</label></td>
+                              <td><label class="container" >A
+                                  <input type="radio" name="grade2" value="A" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">B
+                                  <input type="radio" name="grade2" value="B" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">C
+                                  <input type="radio" name="grade2" value="C" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">D
+                                  <input type="radio" name="grade2" value="D" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">F
+                                  <input type="radio" name="grade2" value="F" onchange="cleanmessage()"/><span class="check"></span>
+                              </label></td></tr>
+                          <tr><td><label class="grade_label" id="Course3" for="grade3">Course 3</label></td>
+                              <td><label class="container" >A
+                                  <input type="radio" name="grade3" value="A" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">B
+                                  <input type="radio" name="grade3" value="B" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">C
+                                  <input type="radio" name="grade3" value="C" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">D
+                                  <input type="radio" name="grade3" value="D" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">F
+                                  <input type="radio" name="grade3" value="F" onchange="cleanmessage()"/><span class="check"></span>
+                              </label></td></tr>
+                          <tr><td><label class="grade_label" id="Course4" for="grade4">Course 4</label></td>
+                              <td><label class="container">A
+                                  <input type="radio" name="grade4" value="A" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">B
+                                  <input type="radio" name="grade4" value="B" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">C
+                                  <input type="radio" name="grade4" value="C" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">D
+                                  <input type="radio" name="grade4" value="D" onchange="cleanmessage()"/><span class="check"></span>
+                              </label>
+                              <label class="container">F
+                                  <input type="radio" name="grade4" value="F" onchange="cleanmessage()"/><span class="check"></span>
+                              </label></td></tr>
+                          </table><br>
+                      </fieldset> <br>
+                      <input type="button" class="custbutton" value="Evaluate" onclick="calcGrade()" />
+                      </div></div>
+                      </fieldset>
+                  </form>
+                  <br>
+                  <p class="message" id="confirm"></p>                  
+              </div>
 
+</body>
+</html>
